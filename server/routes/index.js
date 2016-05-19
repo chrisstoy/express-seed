@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'express-seed' });
+  res.render('index', {
+	  title: 'express-seed',
+	  currentTime : new Date(Date.now()).toLocaleString()
+  });
 });
 
 module.exports = router;
